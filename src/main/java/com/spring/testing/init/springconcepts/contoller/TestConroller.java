@@ -23,9 +23,10 @@ public class TestConroller {
     @GetMapping(value = "/testing")
 
     @ResponseBody
-    public ResponseEntity<Greeting> greeting(@RequestParam(value = "name", required = false) String name) throws CustomException {
+    public ResponseEntity<Greeting> greeting(@RequestParam(value = "name", required = false) String name, @RequestParam(value = "value") Integer value) throws CustomException {
         Greeting greeting = new Greeting();
         greeting.setValue(name);
+        greeting.setIntValue(value);
         customValidator.validateRequest(greeting);
         return new ResponseEntity<>(greeting, HttpStatus.OK);
     }

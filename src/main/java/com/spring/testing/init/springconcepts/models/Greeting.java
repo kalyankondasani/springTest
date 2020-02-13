@@ -1,13 +1,8 @@
 package com.spring.testing.init.springconcepts.models;
 
-import javax.validation.constraints.NotNull;
-
-
 public class Greeting {
-    @NotNull
     private String value;
-    @NotNull
-    private String intValue;
+    private Integer intValue;
 
 
     public String getValue() {
@@ -18,11 +13,11 @@ public class Greeting {
         this.value = value;
     }
 
-    public String getIntValue() {
+    public Integer getIntValue() {
         return intValue;
     }
 
-    public void setIntValue(String intValue) {
+    public void setIntValue(Integer intValue) {
         this.intValue = intValue;
     }
 }
