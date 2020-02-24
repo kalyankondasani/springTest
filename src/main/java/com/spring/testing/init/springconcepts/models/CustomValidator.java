@@ -11,9 +11,5 @@ public class CustomValidator {
         if(StringUtils.isEmpty(greeting.getValue())) {
             throw new CustomException("Required Id is not found");
         }
-
-        if(greeting.getIntValue() < 2) {
-            throw new CustomException("required value should be more than 2");
-        }
     }
 }
